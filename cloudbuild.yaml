@@ -1,4 +1,3 @@
 steps:  
 - name: 'gcr.io/cloud-builders/gcloud' 
-entrypoint: 'bash'
   args: ['-c',  for d in *; do gcloud compute scp  '*' cwallaceatavispl@instance-1:/home/directory --zone=us-central1-a' done]
