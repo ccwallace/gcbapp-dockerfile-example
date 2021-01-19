@@ -1,7 +1,7 @@
-steps:
-- name: 'instance-1'
-  args: 
-  - '-c'
-  - |
-    sudo apt update && sudo apt install openssh-client -y && scp * cwallaceatavispl@instance-1:/home
-
+steps:  
+- name: 'gcr.io/cloud-builders/gcloud' 
+entrypoint: 'bash'
+args: 
+- '-c' 
+- |
+  for d in *; do gcloud compute scp  '*' cwallaceatavispl@instance-1:/home/directory --zone=us-central1-a' done
