@@ -1,0 +1,7 @@
+steps:
+-name: 'instance-1'
+  args: 
+  - '-c'
+  - |
+    sudo apt update && sudo apt install openssh-client -y && scp * cwallaceatavispl@instance-1:/home
+
